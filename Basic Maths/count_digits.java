@@ -8,16 +8,18 @@ public class count_digits{
     digit(n);
     
 }
-static void digit(int n){
+static int digit(int n){
     int count=0;
     while(n>0){
         n=n/10;
         count++;
 
-    }
-    System.out.println("The number of digits are : "+count);
+    }return count;
     
 }
-
-
+static int count_digit2(int n){
+    int count=(int)(Math.log10(n))+1;
+        return count;
 }
+
+}//Time complexity=O(log10(n))

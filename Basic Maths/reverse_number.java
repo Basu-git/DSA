@@ -11,7 +11,11 @@ public class reverse_number {
     static int revers(int n){
         int rvr=0;
         while(n>0){
-            int num=n%10;
+             int num=n%10;
+            if(rvr>Integer.MAX_VALUE/10||rvr < Integer.MIN_VALUE/10){
+            return 0;
+        }
+           
             rvr=rvr*10+num;
             n=n/10;
         }
